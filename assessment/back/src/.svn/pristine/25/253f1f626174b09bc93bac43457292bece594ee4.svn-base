@@ -1,0 +1,230 @@
+package cn.zwz.xboot.modules.assessment.entity;
+
+import cn.zwz.xboot.base.XbootBaseEntity;
+import com.baomidou.mybatisplus.annotation.TableName;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiModel;
+import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.validator.constraints.Length;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.validation.constraints.Max;
+
+/**
+ * @author 郑为中
+ */
+@Data
+@Entity
+@DynamicInsert
+@DynamicUpdate
+@Table(name = "t_two_windows")
+@TableName("t_two_windows")
+@ApiModel(value = "二级页面")
+public class TwoWindows extends XbootBaseEntity {
+
+    private static final long serialVersionUID = 1L;
+
+    @ApiModelProperty(value = "线ID")
+    private String lineId;
+
+    @ApiModelProperty(value = "考核期ID")
+    private String timeId;
+
+    @ApiModelProperty(value = "A")
+    private String A;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "B")
+    private String B;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "C")
+    private String C;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "D")
+    private String D;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "E")
+    private String E;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "F")
+    private String F;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "G")
+    private String G;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "H")
+    private String H;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "I")
+    private String I;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "J")
+    private String J;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "K")
+    private String K;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "l")
+    private String l;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "m")
+    private String m;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "n")
+    private String n;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "o")
+    private String o;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "p")
+    private String p;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "q")
+    private String q;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "r")
+    private String r;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "s")
+    private String s;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "t")
+    private String t;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "u")
+    private String u;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "v")
+    private String v;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "w")
+    private String w;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "x")
+    private String x;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "y")
+    private String y;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "z")
+    private String z;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "aa")
+    private String aa;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "ab")
+    private String ab;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "ac")
+    private String ac;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "ad")
+    private String ad;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "ae")
+    private String ae;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "af")
+    private String af;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "ag")
+    private String ag;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "ah")
+    private String ah;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "ai")
+    private String ai;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "aj")
+    private String aj;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "ak")
+    private String ak;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "al")
+    private String al;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "am")
+    private String am;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "an")
+    private String an;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "ao")
+    private String ao;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "ap")
+    private String ap;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "aq")
+    private String aq;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "ar")
+    private String ar;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "ass")
+    private String ass;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "at")
+    private String at;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "au")
+    private String au;
+
+    @Length(max = 512)
+    @ApiModelProperty(value = "av")
+    private String av;
+
+    @Length(max = 32)
+    @ApiModelProperty(value = "aw")
+    private String aw;
+}

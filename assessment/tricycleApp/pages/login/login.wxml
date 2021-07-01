@@ -1,0 +1,9 @@
+<!-- 郑为中 -->
+<!-- 登入界面的HTML文件 -->
+
+<view class="page">
+  <view style="padding-top: 80%;">
+    <button class="btn_sub" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 一键登入 </button>
+  </view>
+  <!-- <button type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">基础授权 </button>-->
+</view>

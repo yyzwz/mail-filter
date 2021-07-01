@@ -1,0 +1,56 @@
+<view>
+
+<view class="page__bd"> 
+  <view class='container' wx:if="{{orderList.length==0}}">
+        <view style="height:200px;"></view>
+        <text class="noExistText">您还没有提交过审核!</text>
+        <view style="height:150px;"></view>
+  </view>
+  <view class="list">
+     
+    <view class="page__bd" wx:for="{{orderList}}" wx:key="index" wx:for-item="item" >
+        <view class="weui-cells weui-cells_after-title">
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__hd">
+                  <image src="../../statis/img/aaaaa.jpg" style="margin-right: 5px;vertical-align: middle;width:40px; height: 40px;"></image>
+                </view>
+                <view class="weui-cell__bd" wx:if="{{item.status=='尚未审核'}}">
+                  审核{{index+1}}：尚未审核
+                </view>
+                <view class="weui-cell__bd" wx:elif="{{item.status=='已通过'}}" style="color:#00ff00">
+                  审核{{index+1}}：审核通过
+                </view>
+                <view class="weui-cell__bd" wx:else style="color:#ff0000">
+                  审核{{index+1}}：审核未通过
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">审核类型：{{item.type}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__bd">
+                  <text class="can">审核内容：{{item.name}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">审核日期：{{item.date}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__bd">
+                  <text class="can">审核意见：{{item.msg}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__bd">
+                  <button></button>
+                </view>
+            </navigator>
+        </view>
+    </view>
+  </view>
+</view>
+</view>

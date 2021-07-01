@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "verifyCode": "/components/verifyCode/index"
+  },
+  "navigationBarTitleText": "长街三小车登入"
+}

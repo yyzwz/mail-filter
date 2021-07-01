@@ -1,0 +1,95 @@
+<view>
+
+<view class="page__bd"> 
+  <view class="list">
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__hd">
+                  <image src="../../statis/img/aaaaa.jpg" style="margin-right: 5px;vertical-align: middle;width:40px; height: 40px;"></image>
+                </view>
+                <view class="weui-cell__bd" style="color:#ff0000">
+                  审核状态：尚未审核
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">销售日期：{{dataItem.sellDate}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__bd">
+                  <text class="can">车架号：{{dataItem.jia}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">车骨号：{{dataItem.gu}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">车品牌：{{dataItem.pinPai}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">车型号：{{dataItem.xingHao}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">车类型：{{dataItem.type}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">卖家：{{dataItem.sellerName}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">买家姓名：{{dataItem.name}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">买家电话：{{dataItem.mobile}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">户籍地址：{{dataItem.re1}}{{dataItem.addressHu}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">住址：{{dataItem.re2}}{{dataItem.addressZhu}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
+                <view class="weui-cell__bd">
+                  <text class="can">驾照号码：{{dataItem.jiaNumber}}</text>
+                </view>
+            </navigator> 
+            <image wx:if="{{dataItem.piaoPhoto!=null}}" bindtap="preview1" data-src="{{dataItem.piaoPhoto}}" src="https://changjienongye.cn/docs/static/{{dataItem.piaoPhoto}}"></image>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__bd">
+                  <input placeholder="请输入审核意见" bindinput="changeMsg" />
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__bd">
+                  <button type="primary" bindtap="passItem">通过</button>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__bd">
+                  <button type="primary" bindtap="notpassItem">退回</button>
+                </view>
+            </navigator>
+        </view>
+    </view>
+  </view>
+</view>
+</view>

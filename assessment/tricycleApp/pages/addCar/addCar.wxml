@@ -1,0 +1,165 @@
+<!-- 郑为中 -->
+<!-- 子界面1  用于房东提交自己的出租房 -->
+<view class='page'>
+  <view class="weui-form__desc" wx:if="{{sh!=1}}">店铺信息审核尚未通过,无法添加车辆</view>
+  <view class="weui-form" wx:else>
+      <view class="weui-form__text-area">
+        <h2 class="weui-form__title">登记出售车辆</h2>
+      </view>
+      <view class="weui-form__control-area">
+			 <view class="weui-cells__group weui-cells__group_form">
+				  <view class="weui-cells__title">第一部分：车辆信息</view>
+				  <view class="weui-cells weui-cells_form">
+            <!-- 开始 -->
+              <view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+                  <view class="weui-cell__hd">
+                    <label class="weui-label" style="width: 3em">出售日</label>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <!-- <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                      <view class="picker">
+                        当前选择: {{date}}
+                      </view>
+                    </picker> -->
+                    <picker bindchange="sellDate" mode="date" value="{{date}}" >
+                      <view class="weui-select">{{sellDate}}</view>
+                    </picker>
+                </view>
+              </view>
+            <!-- 结尾 -->
+              <!-- 开始 -->
+              <view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+                  <view class="weui-cell__hd">
+                    <label class="weui-label" style="width: 3em">车类型</label>
+                  </view>
+						    <view class="weui-cell__bd">
+                  <picker bindchange="changeCarType" range="{{typeList}}">
+                      <view class="weui-select">{{type}}</view>
+                  </picker>
+                  </view>
+              </view>
+              <!-- 结尾 -->
+            <!-- 开始 -->
+            <view class="weui-cell weui-cell_active">
+              <view class="weui-cell__hd"><label class="weui-label">车架号</label></view>
+                <view class="weui-cell__bd">
+                <input class="weui-input" placeholder="请填写车架号" bindblur="changeJia" value="{{jia}}" placeholder-class="weui-input__placeholder"/>
+                </view>
+            </view>
+            <!-- 结尾 -->
+            <!-- 开始 -->
+            <view class="weui-cell weui-cell_active">
+              <view class="weui-cell__hd"><label class="weui-label">车骨号</label></view>
+                <view class="weui-cell__bd">
+                  <input class="weui-input" placeholder="请填写车骨号" placeholder-class="weui-input__placeholder" bindblur="changeGu" value="{{gu}}" />
+                </view>
+            </view>
+            <!-- 结尾 -->
+            <!-- 开始 -->
+            <view class="weui-cell weui-cell_active">
+              <view class="weui-cell__hd"><label class="weui-label">车品牌</label></view>
+                <view class="weui-cell__bd">
+                  <input class="weui-input" placeholder="请填写车品牌" placeholder-class="weui-input__placeholder" bindblur="changePinPai" value="{{pinPai}}" />
+                </view>
+            </view>
+            <!-- 结尾 -->
+            <!-- 开始 -->
+            <view class="weui-cell weui-cell_active">
+              <view class="weui-cell__hd"><label class="weui-label">车型号</label></view>
+                <view class="weui-cell__bd">
+                  <input class="weui-input" placeholder="请填写车型号" placeholder-class="weui-input__placeholder" bindblur="changeXingHao" value="{{xingHao}}" />
+                </view>
+            </view>
+            <!-- 结尾 -->
+            <!-- 照片 -->
+              <view class='upload_img'>
+                <view class='upload_img_btn'>
+                  <view class='title'>
+                    <view class='shu'></view>
+                    <text>上传发票照片</text>
+                  </view>
+                  <button type="primary" size="{{primarySize}}" bindtap="chooseImage" class='btn'>添加</button>
+                </view>
+                <view class='img_box' id='imgs' style='display:flex;justify-content: space-between;padding-top:10px;'>
+                  <!-- 存放上传的图片的盒子 -->
+                  <block wx:for="{{images}}" wx:key="*this">
+                    <view class="q-image-wrap imgs">
+                      <!-- 图片缩略图  -->
+                      <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview"></image>
+                      <!-- 移除图片的按钮  -->
+                      <view class="q-image-remover delete" data-idx="{{index}}" bindtap="removeImage">删除</view>
+                    </view>
+                  </block>
+                </view>
+              </view>
+              <view class="weui-cells__title">第二部分：驾驶人信息</view>
+              <!-- 开始 -->
+              <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd"><label class="weui-label">姓名</label></view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="驾驶人姓名" placeholder-class="weui-input__placeholder" bindblur="changeOwnerName" value="{{ownerName}}" />
+                  </view>
+              </view>
+              <!-- 结尾 -->
+              <!-- 开始 -->
+              <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd"><label class="weui-label">手机</label></view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="驾驶人手机号" placeholder-class="weui-input__placeholder" bindblur="changeOwnerMobile" value="{{ownerMobile}}" />
+                  </view>
+              </view>
+              <!-- 结尾 -->
+              <!-- 开始 -->
+              <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd"><label class="weui-label">身份证</label></view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="驾驶人身份证号码" placeholder-class="weui-input__placeholder" bindblur="changeOwnerIdCard" value="{{ownerIdcard}}" />
+                  </view>
+              </view>
+              <!-- 结尾 -->
+              <!-- 开始 -->
+              <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd"><label class="weui-label">户籍地址</label></view>
+                  <view class="weui-cell__bd">
+                    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                      <view class="picker">
+                        {{regionData}}
+                      </view>
+                    </picker>
+                    <input class="weui-input" placeholder="驾驶人户籍地址" placeholder-class="weui-input__placeholder" bindblur="changeOwnerAddress1" value="{{ownerAddress1}}" />
+                  </view>
+              </view>
+              <!-- 结尾 -->
+              <!-- 开始 -->
+              <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd"><label class="weui-label">住址</label></view>
+                  <view class="weui-cell__bd">
+                    <picker mode="region" bindchange="bindRegionChange2" value="{{region2}}" custom-item="{{customItem}}">
+                      <view class="picker">
+                        {{regionData2}}
+                      </view>
+                    </picker>
+                    <input class="weui-input" placeholder="驾驶人住址" placeholder-class="weui-input__placeholder" bindblur="changeOwnerAddress2" value="{{ownerAddress2}}" />
+                  </view>
+              </view>
+              <!-- 结尾 -->
+              <view class="weui-form__opr-area">
+                <button type="primary" bindtap="addHouse" class='weui-btn weui-btn_primary'>提交</button>
+              </view>
+              <view class="weui-form__tips-area">
+                <view class="weui-form__tips">您所提交的数据，我们将严格保密</view>
+              </view>
+              <view class="weui-form__extra-area">
+                <view class="weui-footer">
+                  <view class="weui-footer__links">
+                    <a href="javascript:" class="weui-footer__link">长街镇人民政府官网</a>
+                  </view>
+                  <view class="weui-footer__text">宁海长街镇人民政府 © 2021</view>
+                </view>
+              </view>
+          </view>
+       </view>
+      </view>
+      
+  </view>
+</view>

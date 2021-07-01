@@ -1,0 +1,77 @@
+package cn.zwz.xboot.modules.assessment.controller;
+
+import cn.zwz.xboot.common.utils.PageUtil;
+import cn.zwz.xboot.common.utils.ResultUtil;
+import cn.zwz.xboot.common.vo.PageVo;
+import cn.zwz.xboot.common.vo.Result;
+import cn.zwz.xboot.modules.assessment.entity.S4ShenShu;
+import cn.zwz.xboot.modules.assessment.service.IS4ShenShuService;
+import cn.hutool.core.util.StrUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+/**
+ * @author 郑为中
+ */
+@Slf4j
+@RestController
+@Api(description = "考核申述管理接口")
+@RequestMapping("/xboot/s4ShenShu")
+@Transactional
+public class S4ShenShuController {
+
+    @Autowired
+    private IS4ShenShuService iS4ShenShuService;
+
+    @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
+    @ApiOperation(value = "通过id获取")
+    public Result<S4ShenShu> get(@PathVariable String id){
+
+        S4ShenShu s4ShenShu = iS4ShenShuService.getById(id);
+        return new ResultUtil<S4ShenShu>().setData(s4ShenShu);
+    }
+
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
+    @ApiOperation(value = "获取全部数据")
+    public Result<List<S4ShenShu>> getAll(){
+
+        List<S4ShenShu> list = iS4ShenShuService.list();
+        return new ResultUtil<List<S4ShenShu>>().setData(list);
+    }
+
+    @RequestMapping(value = "/getByPage", method = RequestMethod.GET)
+    @ApiOperation(value = "分页获取")
+    public Result<IPage<S4ShenShu>> getByPage(PageVo page){
+
+        IPage<S4ShenShu> data = iS4ShenShuService.page(PageUtil.initMpPage(page));
+        return new ResultUtil<IPage<S4ShenShu>>().setData(data);
+    }
+
+    @RequestMapping(value = "/insertOrUpdate", method = RequestMethod.POST)
+    @ApiOperation(value = "编辑或更新数据")
+    public Result<S4ShenShu> saveOrUpdate(S4ShenShu s4ShenShu){
+
+        if(iS4ShenShuService.saveOrUpdate(s4ShenShu)){
+            return new ResultUtil<S4ShenShu>().setData(s4ShenShu);
+        }
+        return new ResultUtil<S4ShenShu>().setErrorMsg("操作失败");
+    }
+
+    @RequestMapping(value = "/delByIds", method = RequestMethod.POST)
+    @ApiOperation(value = "批量通过id删除")
+    public Result<Object> delAllByIds(@RequestParam String[] ids){
+
+        for(String id : ids){
+            iS4ShenShuService.removeById(id);
+        }
+        return ResultUtil.success("批量通过id删除数据成功");
+    }
+}

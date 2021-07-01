@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37a7e6d3-21c1-4381-a6de-bd5600d04b3f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../maven" />
+        <option name="userSettingsFile" value="C:\java\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pp7dmMUyLq3C5vBHSTWWzSeZJl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/zwz/xboot/modules/utils" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.zwz.xboot.modules.tricycle.controller" />
+      <recent name="cn.zwz.xboot.modules.assessment.controller" />
+      <recent name="cn.zwz.xboot.modules.tricycle.entity" />
+      <recent name="cn.zwz.xboot.modules.utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\java\temp\assessment\back\src\main\java\cn\zwz\xboot\modules\utils" />
+      <recent name="C:\java\temp\assessment\back\src\main\lib" />
+      <recent name="C:\java\temp\back\src\main\java\cn\zwz\xboot\modules\utils" />
+      <recent name="C:\java\temp\back\src\main\resources\mapper" />
+      <recent name="C:\java\temp\nhcj\back\src\main\lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.XbootApplication">
+    <configuration name="QRCodeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.modules.utils.QRCodeUtil" />
+      <module name="xboot-plus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.zwz.xboot.modules.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SellerController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.modules.tricycle.controller.SellerController" />
+      <module name="xboot-plus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.zwz.xboot.modules.tricycle.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeiChatUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.modules.utils.WeiChatUtils" />
+      <module name="xboot-plus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.zwz.xboot.modules.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XbootMPGenerator" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.generator.XbootMPGenerator" />
+      <module name="xboot-plus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.zwz.xboot.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="xboot-plus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.zwz.xboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.zwz.xboot.XbootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="xboot-plus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.zwz.xboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.zwz.xboot.XbootApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.XbootMPGenerator" />
+      <item itemvalue="Application.WeiChatUtils" />
+      <item itemvalue="Application.QRCodeUtil" />
+      <item itemvalue="Application.SellerController" />
+      <item itemvalue="Spring Boot.XbootApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.XbootApplication" />
+        <item itemvalue="Application.SellerController" />
+        <item itemvalue="Application.QRCodeUtil" />
+        <item itemvalue="Application.WeiChatUtils" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37a7e6d3-21c1-4381-a6de-bd5600d04b3f" name="Default Changelist" comment="" />
+      <created>1615868267677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615868267677</updated>
+      <workItem from="1615868271152" duration="4906000" />
+      <workItem from="1615880936682" duration="822000" />
+      <workItem from="1615884640788" duration="3987000" />
+      <workItem from="1615889304918" duration="1529000" />
+      <workItem from="1615890872824" duration="41114000" />
+      <workItem from="1616216632485" duration="8218000" />
+      <workItem from="1616460184701" duration="17630000" />
+      <workItem from="1616561939307" duration="30561000" />
+      <workItem from="1617872863319" duration="2127000" />
+      <workItem from="1617938379425" duration="6474000" />
+      <workItem from="1617951198067" duration="3194000" />
+      <workItem from="1618019144558" duration="455000" />
+      <workItem from="1618019789650" duration="485000" />
+      <workItem from="1618020286578" duration="1000" />
+      <workItem from="1618021591201" duration="3150000" />
+      <workItem from="1618031640180" duration="1225000" />
+      <workItem from="1618040268376" duration="913000" />
+      <workItem from="1618127232329" duration="20000" />
+      <workItem from="1618621395692" duration="909000" />
+      <workItem from="1618628768139" duration="6068000" />
+      <workItem from="1618706420901" duration="15355000" />
+      <workItem from="1618915523868" duration="4083000" />
+      <workItem from="1619139734244" duration="9883000" />
+      <workItem from="1619160465155" duration="2103000" />
+      <workItem from="1619174600862" duration="646000" />
+      <workItem from="1619251974803" duration="2805000" />
+      <workItem from="1619338447434" duration="2502000" />
+      <workItem from="1619503124904" duration="1474000" />
+      <workItem from="1619666958668" duration="1530000" />
+      <workItem from="1620174454405" duration="10000" />
+      <workItem from="1620206405558" duration="1277000" />
+      <workItem from="1620260774778" duration="6000" />
+      <workItem from="1620520317781" duration="14000" />
+      <workItem from="1620523557904" duration="662000" />
+      <workItem from="1624149780892" duration="2261000" />
+      <workItem from="1624159523140" duration="625000" />
+      <workItem from="1624165474318" duration="2855000" />
+      <workItem from="1624169617513" duration="702000" />
+      <workItem from="1625050983951" duration="3898000" />
+      <workItem from="1625127437925" duration="525000" />
+      <workItem from="1625130763311" duration="2731000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1116" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1619149466315">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="1116" y="249" key="#com.intellij.ide.util.MemberChooser/62.0.2498.1080@62.0.2498.1080" timestamp="1619149466315" />
+    <state width="1416" height="535" key="DebuggerActiveHint" timestamp="1625055827667">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1463" height="449" key="DebuggerActiveHint/0.0.2560.1040@0.0.2560.1040" timestamp="1616744002578" />
+    <state width="1416" height="535" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1625055827667" />
+    <state x="1070" y="227" key="FileChooserDialogImpl" timestamp="1617872889048">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="1070" y="227" key="FileChooserDialogImpl/62.0.2498.1080@62.0.2498.1080" timestamp="1617872889048" />
+    <state width="2426" height="263" key="GridCell.Tab.0.bottom" timestamp="1625136279597">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="298" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1616919265383" />
+    <state width="2426" height="263" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1625136279597" />
+    <state width="2426" height="263" key="GridCell.Tab.0.center" timestamp="1625136279597">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="298" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1616919265383" />
+    <state width="2426" height="263" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1625136279597" />
+    <state width="2426" height="263" key="GridCell.Tab.0.left" timestamp="1625136279596">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="298" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1616919265383" />
+    <state width="2426" height="263" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1625136279596" />
+    <state width="2426" height="263" key="GridCell.Tab.0.right" timestamp="1625136279597">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="298" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1616919265383" />
+    <state width="2426" height="263" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1625136279597" />
+    <state width="2426" height="263" key="GridCell.Tab.1.bottom" timestamp="1625136279597">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="298" key="GridCell.Tab.1.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1616919265383" />
+    <state width="2426" height="263" key="GridCell.Tab.1.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1625136279597" />
+    <state width="2426" height="263" key="GridCell.Tab.1.center" timestamp="1625136279597">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="298" key="GridCell.Tab.1.center/0.0.2560.1040@0.0.2560.1040" timestamp="1616919265383" />
+    <state width="2426" height="263" key="GridCell.Tab.1.center/62.0.2498.1080@62.0.2498.1080" timestamp="1625136279597" />
+    <state width="2426" height="263" key="GridCell.Tab.1.left" timestamp="1625136279597">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="298" key="GridCell.Tab.1.left/0.0.2560.1040@0.0.2560.1040" timestamp="1616919265383" />
+    <state width="2426" height="263" key="GridCell.Tab.1.left/62.0.2498.1080@62.0.2498.1080" timestamp="1625136279597" />
+    <state width="2426" height="263" key="GridCell.Tab.1.right" timestamp="1625136279597">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="298" key="GridCell.Tab.1.right/0.0.2560.1040@0.0.2560.1040" timestamp="1616919265383" />
+    <state width="2426" height="263" key="GridCell.Tab.1.right/62.0.2498.1080@62.0.2498.1080" timestamp="1625136279597" />
+    <state width="1692" height="215" key="GridCell.Tab.2.bottom" timestamp="1625056069703">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="287" key="GridCell.Tab.2.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1616915810425" />
+    <state width="1692" height="215" key="GridCell.Tab.2.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1625056069703" />
+    <state width="1692" height="215" key="GridCell.Tab.2.center" timestamp="1625056069703">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="287" key="GridCell.Tab.2.center/0.0.2560.1040@0.0.2560.1040" timestamp="1616915810425" />
+    <state width="1692" height="215" key="GridCell.Tab.2.center/62.0.2498.1080@62.0.2498.1080" timestamp="1625056069703" />
+    <state width="1692" height="215" key="GridCell.Tab.2.left" timestamp="1625056069703">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="287" key="GridCell.Tab.2.left/0.0.2560.1040@0.0.2560.1040" timestamp="1616915810425" />
+    <state width="1692" height="215" key="GridCell.Tab.2.left/62.0.2498.1080@62.0.2498.1080" timestamp="1625056069703" />
+    <state width="1692" height="215" key="GridCell.Tab.2.right" timestamp="1625056069703">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="2488" height="287" key="GridCell.Tab.2.right/0.0.2560.1040@0.0.2560.1040" timestamp="1616915810425" />
+    <state width="1692" height="215" key="GridCell.Tab.2.right/62.0.2498.1080@62.0.2498.1080" timestamp="1625056069703" />
+    <state x="791" y="114" key="SettingsEditor" timestamp="1617872891798">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="791" y="114" key="SettingsEditor/62.0.2498.1080@62.0.2498.1080" timestamp="1617872891798" />
+    <state x="975" y="249" key="run.anything.popup" timestamp="1624168426804">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="936" y="240" key="run.anything.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1616727765029" />
+    <state x="975" y="249" key="run.anything.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1624168426804" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/xboot_plus$XbootApplication.ic" NAME="XbootApplication Coverage Results" MODIFIED="1625055759619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cn.zwz.xboot.*</FILTER>
+    </SUITE>
+  </component>
+</project>

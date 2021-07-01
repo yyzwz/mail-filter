@@ -1,0 +1,60 @@
+<view>
+
+<view class="page__bd"> 
+  <view class='container' wx:if="{{orderList.length==0}}">
+        <view style="height:200px;"></view>
+        <text class="noExistText">您没有需要审核的工单!</text>
+        <view style="height:150px;"></view>
+  </view>
+  <view class="list">
+     
+    <view class="page__bd" wx:for="{{orderList}}" wx:key="index" wx:for-item="item" >
+        <view class="weui-cells weui-cells_after-title">
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../msg5/msg?id={{item.id}}" >
+                <view class="weui-cell__hd">
+                  <image src="../../statis/img/aaaaa.jpg" style="margin-right: 5px;vertical-align: middle;width:40px; height: 40px;"></image>
+                </view>
+                <view class="weui-cell__bd" style="color:#00ff00">
+                  审核{{index+1}}：尚未审核
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../msg5/msg?id={{item.id}}" >
+                <view class="weui-cell__bd">
+                  <text class="can">店名：{{item.shopName}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../msg5/msg?id={{item.id}}">
+                <view class="weui-cell__bd">
+                  <text class="can">责任人：{{item.shopDuty}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../msg5/msg?id={{item.id}}" >
+                <view class="weui-cell__bd">
+                  <text class="can">身份证：{{item.idCard}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../msg5/msg?id={{item.id}}" >
+                <view class="weui-cell__bd">
+                  <text class="can">营业执照：{{item.yyzz}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../msg5/msg?id={{item.id}}" >
+                <view class="weui-cell__bd">
+                  <text class="can">提交时间：{{item.createTime}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../msg5/msg?id={{item.id}}" >
+                <view class="weui-cell__bd">
+                  <text class="can">地址：{{item.address}}</text>
+                </view>
+            </navigator>
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+                <view class="weui-cell__bd">
+                  <button></button>
+                </view>
+            </navigator>
+        </view>
+    </view>
+  </view>
+</view>
+</view>
