@@ -28,6 +28,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -64,12 +65,60 @@ public class CarController {
     @Autowired
     private ICarOwnerService iCarOwnerService;
 
+    public static void main(String[] args) {
+        Date date = new Date(44294l*86400l*1000l - 25569l*86400l*1000l);
+        int year = date.getYear();
+        int month = date.getMonth();
+        System.out.println("OK");
+    }
+
+    private String changeDate(long number) {
+        Date date = new Date(number*86400l*1000l - 25569l*86400l*1000l);
+        int year = date.getYear() + 1900;
+        int month = date.getMonth() + 1;
+        int date1 = date.getDate();
+        return year + "-" + (month < 10 ? "0" + month : month) + "-" + (date1 < 10 ? "0" + date1 : date1);
+    }
 
     @RequestMapping(value = "/importData", method = RequestMethod.POST)
     public Result<String> importData(@RequestBody List<CarImportBaoXianVo> voList) {
+        int index = 0;
+        List<CarOwner> carOwners = iCarOwnerService.list();
         for (CarImportBaoXianVo vo : voList) {
-            String bdh = vo.get保单号();
-            System.out.println("OK");
+            String zjh = vo.get证件号();
+            String cph = vo.get车牌号();
+            boolean hasUser = false;
+            for (CarOwner carOwner : carOwners) {
+                if(carOwner.getOwnerIdcard().equals(zjh)) {
+                    hasUser = true;
+                }
+            }
+            if(!hasUser) {
+                CarOwner carOwner = new CarOwner();
+                carOwner.setOwnerIdcard(vo.get证件号());
+                carOwner.setAddressHu(vo.get地址());
+                carOwner.setAddressZhu(vo.get地址());
+                carOwner.setMobile(vo.get电话());
+                carOwner.setName(vo.get被保人());
+                iCarOwnerService.saveOrUpdate(carOwner);
+            }
+            Car car = new Car();
+            car.setBdh(vo.get保单号());
+            car.setBaoXian(changeDate(Long.parseLong(vo.get起保日期())));
+            car.setBaoXian2(changeDate(Long.parseLong(vo.get终止日期())));
+            car.setSellerName("虚拟店铺");
+            car.setSellerId("1385394385809707009");
+            car.setJia(vo.get车架号());
+            car.setPaiHao(vo.get车牌号());
+            car.setName(vo.get被保人());
+            car.setOwnerIdcard(vo.get证件号());
+            car.setType("电动三轮车");
+            car.setRe1("浙江省宁波市宁海县");
+            car.setRe2("浙江省宁波市宁海县");
+            car.setRemark("初始数据,批量导入");
+            car.setSh("1");
+            iCarService.saveOrUpdate(car);
+            System.out.println(index++);
         }
         return new ResultUtil<String>().setData("OK");
     }
@@ -83,7 +132,9 @@ public class CarController {
     public Result<List<Car>> appUpdate(@RequestParam String id,@RequestParam(required = false) int pageNumber,@RequestParam(required = false) String name){
         int pageSize = 5;
         QueryWrapper<Car> qw = new QueryWrapper<>();
-        qw.eq("seller_id",id);
+        if(!id.equals("ZWZ1314")) {
+            qw.eq("seller_id",id);
+        }
         qw.orderByDesc("create_time");
         if(name != null && !NullUtils.isNull(name)) {
             qw.like("pai_hao",name);
