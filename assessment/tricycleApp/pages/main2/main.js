@@ -29,6 +29,9 @@ Page({
       })
     }
   },
+  saoMaFx() {
+    wx.scanCode({  success: (res) => {    console.log(res)  } })
+  },
   navbarTap: function (e) {
     wx.navigateTo({
       url: e.currentTarget.dataset.href

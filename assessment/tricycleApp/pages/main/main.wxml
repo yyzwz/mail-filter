@@ -1,6 +1,6 @@
 <!-- 郑为中 -->
 <view class="page">
-  <view class="navbar" style="padding-top: 60%;">
+  <view class="navbar" style="padding-top: 70%;">
     <a class="navbtn" bindtap="intent01">
       <image class="menu_icon" src="../../statis/img/btn1.png"></image>
       <text class="menu_text">售车登记</text>

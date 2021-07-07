@@ -2,72 +2,71 @@
 
   <view class="page__bd"> 
     <view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
-      <input type="text" class="weui-search-bar__input" placeholder="请输入店名"   bindinput="changeName" style="width:200px;" />
+      <input type="text" class="weui-search-bar__input" placeholder="请输入车牌号"   bindinput="changeName" style="width:200px;" />
       <button type="primary" wx:if="{{lookBigImageFlag==false}}" bindtap="lookBigImageFx" size="mini" plain style="position: fixed;right:5px;">显示照片</button>
       <button type="primary" wx:if="{{lookBigImageFlag==true}}" bindtap="lookBigImageFx" size="mini" plain style="position: fixed;right:5px;">隐藏照片</button>
 		</view>
     <view class='container' wx:if="{{orderList.length==0}}">
           <view style="height:200px;"></view>
-          <text class="noExistText">没有登记的店铺信息!</text>
+          <text class="noExistText">该店铺尚未登记车辆!</text>
           <view style="height:150px;"></view>
     </view>
     <view class="list">
-       
       <view class="page__bd" wx:for="{{orderList}}" wx:key="index" wx:for-item="item" >
           <view class="weui-cells weui-cells_after-title">
-              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../MyOrders4/MyOrders?id={{item.id}}" >
+            <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
                   <view class="weui-cell__hd">
                     <image src="../../statis/img/aaaaa.jpg" style="margin-right: 5px;vertical-align: middle;width:40px; height: 40px;"></image>
                   </view>
                   <view class="weui-cell__bd" wx:if="{{item.sh=='0'}}">
-                    店铺{{index+1}}：尚未审核
+                    车辆{{index+1}}：尚未审核
                   </view>
                   <view class="weui-cell__bd" wx:elif="{{item.sh=='1'}}" style="color:#00ff00">
-                    店铺{{index+1}}：审核通过
+                    车辆{{index+1}}：审核通过
                   </view>
                   <view class="weui-cell__bd" wx:else style="color:#ff0000">
-                    店铺{{index+1}}：审核未通过
+                    车辆{{index+1}}：审核未通过
                   </view>
               </navigator>
-              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../MyOrders4/MyOrders?id={{item.id}}" >
+              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
                   <view class="weui-cell__bd">
-                    <text class="can">店铺名：{{item.shopName}}</text>
+                    <text class="can">车主姓名：{{item.name}}</text>
                   </view>
               </navigator>
-              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../MyOrders4/MyOrders?id={{item.id}}" >
+              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  >
                   <view class="weui-cell__bd">
-                    <text class="can">责任人：{{item.shopDuty}}</text>
+                    <text class="can">联系方式：{{item.mobile}}</text>
                   </view>
               </navigator>
-              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../MyOrders4/MyOrders?id={{item.id}}">
+              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
                   <view class="weui-cell__bd">
-                    <text class="can">电话：{{item.mobile}}</text>
+                    <text class="can">身份证：{{item.ownerIdcard}}</text>
                   </view>
               </navigator>
-              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../MyOrders4/MyOrders?id={{item.id}}">
+              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
                   <view class="weui-cell__bd">
-                    <text class="can">身份证：{{item.idCard}} </text>
+                    <text class="can">车牌号：{{item.paiHao}} </text>
                   </view>
               </navigator>
-              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../MyOrders4/MyOrders?id={{item.id}}" >
+              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
                   <view class="weui-cell__bd">
-                    <text class="can">地址：{{item.address}}</text>
+                    <text class="can">车主住址：{{item.addressZhu}}</text>
                   </view>
               </navigator>
-              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active"  url="../MyOrders4/MyOrders?id={{item.id}}">
+              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
                   <view class="weui-cell__bd">
-                    <text class="can">营业执照：{{item.yyzz}}</text>
+                    <text class="can">处罚情况：{{item.violation}}</text>
                   </view>
               </navigator>
               <view wx:if="{{lookBigImageFlag}}">
-                <image wx:if="{{item.yyzzFile!=null}}" bindtap="preview1" data-src="{{item.yyzzFile}}" src="https://changjienongye.cn/yyzz/{{item.yyzzFile}}"></image>
-                <image wx:if="{{item.addressFile!=null}}" bindtap="preview2" data-src="{{item.addressFile}}" src="https://changjienongye.cn/dp/{{item.addressFile}}"></image>
+                <image wx:if="{{item.piaoPhoto!=null}}" bindtap="lookBigImage" src="https://changjienongye.cn/docs/static/{{item.piaoPhoto}}" data-src="{{item.piaoPhoto}}"></image>
+                <image wx:if="{{item.carPhoto!=null}}" bindtap="lookBigImage2" src="https://changjienongye.cn/docs/static2/{{item.carPhoto}}" data-src="{{item.carPhoto}}"></image>
               </view>
-              <!-- <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../updateCar/updateCar?id={{item.id}}">
+              <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../updateCar/updateCar?id={{item.id}}">
                   <view class="weui-cell__bd">
                     <button type="primary" class='buttomm' >修改/删除</button>
                   </view>
-              </navigator> -->
+              </navigator>
               <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
                   <view class="weui-cell__bd">
                     <button></button>

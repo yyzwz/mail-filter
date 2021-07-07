@@ -54,9 +54,6 @@ public class CarController {
     private ISellerService iSellerService;
 
     @Autowired
-    private IUpdateRecordService iUpdateRecordService;
-
-    @Autowired
     private IAdminLookArchService iAdminLookArchService;
 
     @Autowired
@@ -64,6 +61,19 @@ public class CarController {
 
     @Autowired
     private ICarOwnerService iCarOwnerService;
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public Result<String> test() {
+        List<Car> carList = iCarService.list();
+        int i = 1;
+        for (Car car : carList) {
+            car.setFileId(i);
+            iCarService.saveOrUpdate(car);
+            System.out.println(i);
+            i += 1;
+        }
+        return new ResultUtil<String>().setSuccessMsg("OK");
+    }
 
     public static void main(String[] args) {
         Date date = new Date(44294l*86400l*1000l - 25569l*86400l*1000l);

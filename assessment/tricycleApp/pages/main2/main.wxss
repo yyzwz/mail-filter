@@ -16,7 +16,7 @@ page {
   align-items: center;
 }
 .navbtn {
-  margin: 2.5%;
+  margin: 30rpx;
   /* padding: 5rpx; */
   display: flex;
   flex-direction: column;
@@ -24,8 +24,8 @@ page {
   /* border: solid #eee 1rpx; */
   justify-content: center;
   align-items: center;
-  width: 220rpx;
-  height: 220rpx;
+  width: 200rpx;
+  height: 200rpx;
 }
 .menu_icon {
   width: 75%;
@@ -48,6 +48,13 @@ page {
   width: 120px !important;
   height: auto;
   background-color: rgb(238, 83, 83);
+  font-size: 12px;
+  border-radius:45px;
+}
+.btn_sub2{
+  width: 120px !important;
+  height: auto;
+  background-color: rgb(56, 114, 240);
   font-size: 12px;
   border-radius:45px;
 }
