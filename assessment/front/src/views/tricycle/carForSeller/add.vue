@@ -155,9 +155,7 @@ export default {
     handleSubmit() {
       // this.$refs.form.validate(valid => {
       //   if (valid) {
-        console.log(this.form);
           addCar(this.form).then(res => {
-            console.log(res);
             this.submitLoading = false;
             if (res.success) {
               this.$Message.success("操作成功");

@@ -173,9 +173,7 @@ export default {
           if(res.result == null) {
             this.$Message.error("买家不存在!");
           } else {
-            console.log(this.form.name);
             this.form.name = res.result.name;
-            console.log(this.form.name);
             this.form.mobile = res.result.mobile;
             this.form.addressHu = res.result.addressHu;
             this.form.addressZhu = res.result.addressZhu;

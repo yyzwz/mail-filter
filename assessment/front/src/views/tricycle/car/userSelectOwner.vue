@@ -235,7 +235,6 @@ export default {
         this.hualoading = false;
         if (res.success) {
           this.huaData = res.result;
-          console.log(res);
           this.huaTotal = res.result.total;
         }
       });

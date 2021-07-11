@@ -306,7 +306,8 @@ export default {
                 props: {
                   type: "primary",
                   size: "small",
-                  icon: "ios-create-outline"
+                  icon: "ios-create-outline",
+                  // disabled: params.row.carPhoto == null
                 },
                 style: {
                   marginRight: "5px"

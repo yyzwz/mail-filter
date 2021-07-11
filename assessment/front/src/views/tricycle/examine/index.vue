@@ -270,7 +270,6 @@ export default {
         this.imgSrc1 = 'https://changjienongye.cn/dp/' + this.nowSelectData.addressFile;
         if(this.nowSelectData.hasImage == '1'){
           this.imgSrc = 'https://changjienongye.cn/yyzz/' + this.nowSelectData.yyzzFile + '.jpg';
-          console.log(this.imgSrc);
         }
       }
     },
@@ -320,7 +319,6 @@ export default {
       var that = this;
       this.loading = true;
       getSellerNotShList().then(res => {
-        console.log(res);
         if (res.success) {
           that.data = res.result;
           that.total = res.result.length;

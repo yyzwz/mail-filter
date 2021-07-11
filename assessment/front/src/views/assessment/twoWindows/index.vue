@@ -2686,7 +2686,6 @@ export default {
     getDataList() {
       this.loading = true;
         getTwoWindowsList({lineId:this.searchForm.lineId,timeId:this.searchForm.timeId }).then(res => {
-          console.log(res);
           this.loading = false;
           if (res.success) {
             this.data = res.result;

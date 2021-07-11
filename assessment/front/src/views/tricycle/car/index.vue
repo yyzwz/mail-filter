@@ -155,6 +155,16 @@
         </div>
       </div>
     </Drawer>
+    <Modal
+        v-model="lookImageVisable"
+        width="90"
+        height="auto"
+        footer-hide
+        title="大图预览">
+        <Row>
+          <img :src="imgSrcNew" height="100%" width="100%" />
+        </Row>
+    </Modal>
   </div>
 </template>
 
@@ -172,6 +182,8 @@ export default {
   },
   data() {
     return {
+      imgSrcNew: '',
+      lookImageVisable: false,
       importModalVisible: false,
       importTableData: [],
       importColumns: [],
@@ -311,7 +323,8 @@ export default {
         title: "照片",
         key: "action",
         align: "center",
-        width: 240,
+        width: 500,
+        fixed: "right",
         render: (h, params) => {
           return h("div", [
             h(
@@ -320,7 +333,8 @@ export default {
                 props: {
                   type: "success",
                   size: "small",
-                  icon: "ios-create-outline"
+                  icon: "ios-create-outline",
+                  disabled: params.row.piaoPhoto==null
                 },
                 style: {
                   marginRight: "5px"
@@ -339,7 +353,7 @@ export default {
                 props: {
                   type: "info",
                   size: "small",
-                  icon: "ios-create-outline"
+                  icon: "ios-create-outline",
                 },
                 style: {
                   marginRight: "5px"
@@ -347,6 +361,44 @@ export default {
                 on: {
                   click: () => {
                     this.lookPhoto2(params.row);
+                  }
+                }
+              },
+              "身份证照"
+            ),
+            h(
+              "Button",
+              {
+                props: {
+                  type: "error",
+                  size: "small",
+                  icon: "ios-create-outline",
+                },
+                style: {
+                  marginRight: "5px"
+                },
+                on: {
+                  click: () => {
+                    this.lookPhoto3(params.row);
+                  }
+                }
+              },
+              "车架照片"
+            ),
+            h(
+              "Button",
+              {
+                props: {
+                  type: "warning",
+                  size: "small",
+                  icon: "ios-create-outline",
+                },
+                style: {
+                  marginRight: "5px"
+                },
+                on: {
+                  click: () => {
+                    this.lookPhoto4(params.row);
                   }
                 }
               },
@@ -425,13 +477,30 @@ export default {
       return "";
     },
     lookMa(e) {
-      window.open("https://changjienongye.cn/carMa/" + e.fileId + ".png","_blank");
+      this.imgSrcNew = "https://changjienongye.cn/carMa/" + e.fileId + ".png";
+      this.lookImageVisable = true;
+      // window.open("https://changjienongye.cn/carMa/" + e.fileId + ".png","_blank");
     },
     lookPhoto(e) {
-      window.open("https://changjienongye.cn/docs/static/" + e.piaoPhoto,"_blank");
+      this.imgSrcNew = "https://changjienongye.cn/docs/static/" + e.piaoPhoto;
+      this.lookImageVisable = true;
+      // window.open("https://changjienongye.cn/docs/static/" + e.piaoPhoto,"_blank");
     },
     lookPhoto2(e) {
-      window.open("https://changjienongye.cn/docs/static2/" + e.carPhoto,"_blank");
+      this.imgSrcNew = "https://changjienongye.cn/docs/carPhoto/" + e.paiHao + "/" + e.paiHao + "0.png";
+      this.lookImageVisable = true;
+      // window.open("https://changjienongye.cn/docs/static2/" + e.carPhoto,"_blank");
+    },
+    lookPhoto3(e) {
+      this.imgSrcNew = "https://changjienongye.cn/docs/carPhoto/" + e.paiHao + "/" + e.paiHao + "1.png";
+      this.lookImageVisable = true;
+    },
+    lookPhoto4(e) {
+      this.imgSrcNew = "https://changjienongye.cn/docs/carPhoto/" + e.paiHao + "/" + e.paiHao + "2.png";
+      this.lookImageVisable = true;
+    },
+    downloadTemple() {
+      window.open("https://changjienongye.cn/docs/static/Template.xlsx","_blank");
     },
     changeSellDate(e) {
       this.searchForm.sellDate = e;
@@ -562,7 +631,6 @@ export default {
       });
     },
     startImportData() {
-      console.log("startImportData");
       this.importModalVisible = true;
     },
     beforeUploadImport(file) {

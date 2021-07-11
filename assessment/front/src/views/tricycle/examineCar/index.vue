@@ -317,7 +317,6 @@ export default {
       // console.log(this.nowSelectData.id);
       // console.log(this.nowSelectData.money);
       pass({id:this.nowSelectData.id,msg:'OK'}).then(res => {
-        console.log(res);
         that.nextData();
       })
     },
@@ -326,7 +325,6 @@ export default {
       // console.log(this.nowSelectData.id);
       // console.log(this.nowSelectData.money);
       pass({id:this.nowSelectData.id,msg:this.disPassReason}).then(res => {
-        console.log(res);
         that.nextData();
       })
     },

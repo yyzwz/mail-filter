@@ -164,7 +164,6 @@ export default {
     },
     huashowHuaSelect(e){
       this.$emit("submited", e);
-      // console.log(e);
     },
     setCurrentValue(value) {
       if (value === this.visible) {
