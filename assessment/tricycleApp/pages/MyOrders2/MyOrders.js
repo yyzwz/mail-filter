@@ -37,6 +37,34 @@ Page({
       urls: tempList
     })
   },
+  preview3(event) {
+    console.log(event);
+    let currentUrl = "https://changjienongye.cn/docs/carPhoto/" + event.currentTarget.dataset.src + "/" + event.currentTarget.dataset.src + "0.png";
+    var tempList = [];
+    tempList.push(currentUrl);
+    wx.previewImage({
+      current: currentUrl,
+      urls: tempList
+    })
+  },
+  preview4(event) {
+    let currentUrl = "https://changjienongye.cn/docs/carPhoto/" + event.currentTarget.dataset.src + "/" + event.currentTarget.dataset.src + "1.png";
+    var tempList = [];
+    tempList.push(currentUrl);
+    wx.previewImage({
+      current: currentUrl,
+      urls: tempList
+    })
+  },
+  preview5(event) {
+    let currentUrl = "https://changjienongye.cn/docs/carPhoto/" + event.currentTarget.dataset.src + "/" + event.currentTarget.dataset.src + "2.png";
+    var tempList = [];
+    tempList.push(currentUrl);
+    wx.previewImage({
+      current: currentUrl,
+      urls: tempList
+    })
+  },
   deleteCar(e) {
     console.log(e);
   },

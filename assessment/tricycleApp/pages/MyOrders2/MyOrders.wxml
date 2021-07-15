@@ -60,8 +60,11 @@
                   </view>
               </navigator>
               <view wx:if="{{lookBigImageFlag}}">
-                <image wx:if="{{item.piaoPhoto!=null}}" bindtap="preview1" data-src="{{item.piaoPhoto}}" src="https://changjienongye.cn/docs/static/{{item.piaoPhoto}}"></image>
-                <image wx:if="{{item.carPhoto!=null}}" bindtap="preview2" data-src="{{item.carPhoto}}" src="https://changjienongye.cn/docs/static2/{{item.carPhoto}}"></image>
+                <!-- <image wx:if="{{item.piaoPhoto!=null}}" bindtap="preview1" data-src="{{item.piaoPhoto}}" src="https://changjienongye.cn/docs/static/{{item.piaoPhoto}}"></image>
+                <image wx:if="{{item.carPhoto!=null}}" bindtap="preview2" data-src="{{item.carPhoto}}" src="https://changjienongye.cn/docs/static2/{{item.carPhoto}}"></image> -->
+                <image bindtap="preview3" data-src="{{item.paiHao}}" src="https://changjienongye.cn/docs/carPhoto/{{item.paiHao}}/{{item.paiHao}}0.png"></image>
+                <image bindtap="preview4" data-src="{{item.paiHao}}" src="https://changjienongye.cn/docs/carPhoto/{{item.paiHao}}/{{item.paiHao}}1.png"></image>
+                <image bindtap="preview5" data-src="{{item.paiHao}}" src="https://changjienongye.cn/docs/carPhoto/{{item.paiHao}}/{{item.paiHao}}2.png"></image>
               </view>
               <!-- <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../updateCar/updateCar?id={{item.id}}">
                   <view class="weui-cell__bd">
