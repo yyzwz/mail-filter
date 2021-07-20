@@ -19,6 +19,7 @@ public class CarImportBaoXianVo {
     private String 地址;
     private String 车牌号;
     private String 车架号;
+    private String 二维码;
 //    private String bdh;
 //    private String qbri;
 //    private String zzrq;

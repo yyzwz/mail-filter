@@ -64,72 +64,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReNameFileUtils">
-    <configuration name="CarController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.modules.tricycle.controller.CarController" />
-      <module name="xboot-plus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zwz.xboot.modules.tricycle.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QRCodeUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.modules.utils.QRCodeUtil" />
-      <module name="xboot-plus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zwz.xboot.modules.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReNameFileUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.modules.tricycle.utils.ReNameFileUtils" />
-      <module name="xboot-plus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zwz.xboot.modules.tricycle.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SellerController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.modules.tricycle.controller.SellerController" />
-      <module name="xboot-plus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zwz.xboot.modules.tricycle.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="XbootMPGenerator" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.zwz.xboot.generator.XbootMPGenerator" />
-      <module name="xboot-plus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.zwz.xboot.generator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="XbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="xboot-plus" />
       <extension name="coverage">
@@ -157,21 +92,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.XbootMPGenerator" />
-      <item itemvalue="Application.QRCodeUtil" />
-      <item itemvalue="Application.SellerController" />
-      <item itemvalue="Application.CarController" />
-      <item itemvalue="Application.ReNameFileUtils" />
-      <item itemvalue="Spring Boot.XbootApplication" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ReNameFileUtils" />
         <item itemvalue="Spring Boot.XbootApplication" />
-        <item itemvalue="Application.CarController" />
-        <item itemvalue="Application.SellerController" />
-        <item itemvalue="Application.QRCodeUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +107,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -252,6 +180,10 @@
       <workItem from="1625971724378" duration="688000" />
       <workItem from="1625973039686" duration="2723000" />
       <workItem from="1626317794543" duration="457000" />
+      <workItem from="1626682483613" duration="1801000" />
+      <workItem from="1626684601542" duration="3339000" />
+      <workItem from="1626694865908" duration="1007000" />
+      <workItem from="1626740991533" duration="1972000" />
     </task>
     <servers />
   </component>
@@ -259,70 +191,66 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="703" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626742961342">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="703" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1626742961342" />
     <state x="1116" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1619149466315">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="1116" y="249" key="#com.intellij.ide.util.MemberChooser/62.0.2498.1080@62.0.2498.1080" timestamp="1619149466315" />
-    <state width="1416" height="535" key="DebuggerActiveHint" timestamp="1625055827667">
+    <state width="1416" height="535" key="DebuggerActiveHint" timestamp="1626742654925">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="1416" height="535" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1625055827667" />
-    <state x="1070" y="227" key="FileChooserDialogImpl" timestamp="1617872889048">
+    <state width="1416" height="535" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1626742654925" />
+    <state width="2455" height="364" key="GridCell.Tab.0.bottom" timestamp="1626742965055">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state x="1070" y="227" key="FileChooserDialogImpl/62.0.2498.1080@62.0.2498.1080" timestamp="1617872889048" />
-    <state width="1721" height="502" key="GridCell.Tab.0.bottom" timestamp="1626318251648">
+    <state width="2455" height="364" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1626742965055" />
+    <state width="2455" height="364" key="GridCell.Tab.0.center" timestamp="1626742965055">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="1721" height="502" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1626318251648" />
-    <state width="1721" height="502" key="GridCell.Tab.0.center" timestamp="1626318251648">
+    <state width="2455" height="364" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1626742965055" />
+    <state width="2455" height="364" key="GridCell.Tab.0.left" timestamp="1626742965054">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="1721" height="502" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1626318251648" />
-    <state width="1721" height="502" key="GridCell.Tab.0.left" timestamp="1626318251648">
+    <state width="2455" height="364" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1626742965054" />
+    <state width="2455" height="364" key="GridCell.Tab.0.right" timestamp="1626742965055">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="1721" height="502" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1626318251648" />
-    <state width="1721" height="502" key="GridCell.Tab.0.right" timestamp="1626318251648">
+    <state width="2455" height="364" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1626742965055" />
+    <state width="2455" height="364" key="GridCell.Tab.1.bottom" timestamp="1626742965055">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="1721" height="502" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1626318251648" />
-    <state width="2426" height="464" key="GridCell.Tab.1.bottom" timestamp="1625979910032">
+    <state width="2455" height="364" key="GridCell.Tab.1.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1626742965055" />
+    <state width="2455" height="364" key="GridCell.Tab.1.center" timestamp="1626742965055">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="2426" height="464" key="GridCell.Tab.1.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1625979910032" />
-    <state width="2426" height="464" key="GridCell.Tab.1.center" timestamp="1625979910032">
+    <state width="2455" height="364" key="GridCell.Tab.1.center/62.0.2498.1080@62.0.2498.1080" timestamp="1626742965055" />
+    <state width="2455" height="364" key="GridCell.Tab.1.left" timestamp="1626742965055">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="2426" height="464" key="GridCell.Tab.1.center/62.0.2498.1080@62.0.2498.1080" timestamp="1625979910032" />
-    <state width="2426" height="464" key="GridCell.Tab.1.left" timestamp="1625979910032">
+    <state width="2455" height="364" key="GridCell.Tab.1.left/62.0.2498.1080@62.0.2498.1080" timestamp="1626742965055" />
+    <state width="2455" height="364" key="GridCell.Tab.1.right" timestamp="1626742965055">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="2426" height="464" key="GridCell.Tab.1.left/62.0.2498.1080@62.0.2498.1080" timestamp="1625979910032" />
-    <state width="2426" height="464" key="GridCell.Tab.1.right" timestamp="1625979910032">
+    <state width="2455" height="364" key="GridCell.Tab.1.right/62.0.2498.1080@62.0.2498.1080" timestamp="1626742965055" />
+    <state width="2426" height="464" key="GridCell.Tab.2.bottom" timestamp="1626684718171">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="2426" height="464" key="GridCell.Tab.1.right/62.0.2498.1080@62.0.2498.1080" timestamp="1625979910032" />
-    <state width="1692" height="215" key="GridCell.Tab.2.bottom" timestamp="1625056069703">
+    <state width="2426" height="464" key="GridCell.Tab.2.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1626684718171" />
+    <state width="2426" height="464" key="GridCell.Tab.2.center" timestamp="1626684718168">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="1692" height="215" key="GridCell.Tab.2.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1625056069703" />
-    <state width="1692" height="215" key="GridCell.Tab.2.center" timestamp="1625056069703">
+    <state width="2426" height="464" key="GridCell.Tab.2.center/62.0.2498.1080@62.0.2498.1080" timestamp="1626684718168" />
+    <state width="2426" height="464" key="GridCell.Tab.2.left" timestamp="1626684718167">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="1692" height="215" key="GridCell.Tab.2.center/62.0.2498.1080@62.0.2498.1080" timestamp="1625056069703" />
-    <state width="1692" height="215" key="GridCell.Tab.2.left" timestamp="1625056069703">
+    <state width="2426" height="464" key="GridCell.Tab.2.left/62.0.2498.1080@62.0.2498.1080" timestamp="1626684718167" />
+    <state width="2426" height="464" key="GridCell.Tab.2.right" timestamp="1626684718170">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state width="1692" height="215" key="GridCell.Tab.2.left/62.0.2498.1080@62.0.2498.1080" timestamp="1625056069703" />
-    <state width="1692" height="215" key="GridCell.Tab.2.right" timestamp="1625056069703">
-      <screen x="62" y="0" width="2498" height="1080" />
-    </state>
-    <state width="1692" height="215" key="GridCell.Tab.2.right/62.0.2498.1080@62.0.2498.1080" timestamp="1625056069703" />
-    <state x="791" y="114" key="SettingsEditor" timestamp="1617872891798">
-      <screen x="62" y="0" width="2498" height="1080" />
-    </state>
-    <state x="791" y="114" key="SettingsEditor/62.0.2498.1080@62.0.2498.1080" timestamp="1617872891798" />
+    <state width="2426" height="464" key="GridCell.Tab.2.right/62.0.2498.1080@62.0.2498.1080" timestamp="1626684718170" />
     <state x="975" y="249" key="run.anything.popup" timestamp="1624168426804">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>

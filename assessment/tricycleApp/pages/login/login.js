@@ -38,6 +38,7 @@ Page({
   },
   onLoad: function (options) {
     // this.getLogin();
+    // console.log(app.data);
     this.setData({
       islogin:app.data.loginID
     })

@@ -1,7 +1,10 @@
 package cn.zwz.xboot.common.vo;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -10,6 +13,7 @@ import java.io.Serializable;
  * 前后端交互数据标准
  */
 @Data
+@JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
 public class Result<T> implements Serializable{
 
     private static final long serialVersionUID = 1L;

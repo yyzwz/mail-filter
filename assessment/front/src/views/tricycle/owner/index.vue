@@ -129,16 +129,16 @@
                 <FormItem label="身份证号">
                   <Input readonly v-model="nowSelectData.ownerIdcard" style="width: 260px" />
                 </FormItem>
-                <FormItem label="户籍地址1">
+                <FormItem label="户籍区县">
                   <Input v-model="nowSelectData.re1" style="width: 260px" />
                 </FormItem>
-                <FormItem label="户籍地址2">
+                <FormItem label="户籍地址">
                   <Input readonly v-model="nowSelectData.addressHu" style="width: 260px" />
                 </FormItem>
-                <FormItem label="住址1">
+                <FormItem label="住址区县">
                   <Input readonly v-model="nowSelectData.re2" style="width: 260px" />
                 </FormItem>
-                <FormItem label="住址2">
+                <FormItem label="住址">
                   <Input readonly v-model="nowSelectData.addressZhu" style="width: 260px" />
                 </FormItem>
                 <FormItem label="驾照号码">
@@ -366,7 +366,8 @@ export default {
     },
     getCarItem() {
       this.nowSelectData = this.nowSelectCarList[this.nowSelectIndex];
-      this.imgSrc = 'https://changjienongye.cn/docs/static2/' + this.nowSelectData.carPhoto;
+      // this.imgSrc = 'https://changjienongye.cn/docs/static2/' + this.nowSelectData.carPhoto;
+      this.imgSrc = "https://changjienongye.cn/docs/carPhoto/" + this.nowSelectData.paiHao + "/" + this.nowSelectData.paiHao + "2.png";
     },
     lookCarList(e) {
       this.selectRow = e;
@@ -375,7 +376,8 @@ export default {
       this.carListTotal = e.carList.length;
       if(e.carList.length > 0) {
         this.nowSelectData = e.carList[this.nowSelectIndex];
-        this.imgSrc = 'https://changjienongye.cn/docs/static2/' + this.nowSelectData.carPhoto;
+        // this.imgSrc = 'https://changjienongye.cn/docs/static2/' + this.nowSelectData.carPhoto;
+        this.imgSrc = "https://changjienongye.cn/docs/carPhoto/" + this.nowSelectData.paiHao + "/" + this.nowSelectData.paiHao + "2.png";
       }
     },
     changeSellDate(e) {

@@ -30,7 +30,33 @@ Page({
     }
   },
   saoMaFx() {
-    wx.scanCode({  success: (res) => {    console.log(res)  } })
+    var that = this;
+    wx.scanCode({  
+        success: (res) => {
+          var carId = res.result;
+          wx.request({
+            url: app.data.appUrl + '/car/getCarByQrCode?code=' + carId,
+            method: "GET",
+            header: {
+              'content-type': 'application/json'
+            },
+            success: function (res) {
+              console.log(res);
+              if(res.data.success) {
+                wx.navigateTo({
+                  url: '../lookCar/lookCar?id=' + res.data.result.id,
+                })
+              } else {
+                wx.showToast({
+                  title: '没有信息',
+                  icon: 'none'
+                })
+              }
+            }
+          }) 
+          
+        } 
+      })
   },
   navbarTap: function (e) {
     wx.navigateTo({

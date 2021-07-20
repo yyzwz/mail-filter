@@ -65,12 +65,16 @@ public class CarController {
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public Result<String> test() {
         List<Car> carList = iCarService.list();
-        int i = 1;
+        List<CarOwner> carOwnerList = iCarOwnerService.list();
         for (Car car : carList) {
-            car.setFileId(i);
+            String ownerIdcard = car.getOwnerIdcard();
+            for (CarOwner carOwner : carOwnerList) {
+                String ownerIdcard1 = carOwner.getOwnerIdcard();
+                if (ownerIdcard != null && ownerIdcard.equals(ownerIdcard1)) {
+                    car.setMobile(carOwner.getMobile());
+                }
+            }
             iCarService.saveOrUpdate(car);
-            System.out.println(i);
-            i += 1;
         }
         return new ResultUtil<String>().setSuccessMsg("OK");
     }
@@ -114,8 +118,12 @@ public class CarController {
             }
             Car car = new Car();
             car.setBdh(vo.get保单号());
-            car.setBaoXian(changeDate(Long.parseLong(vo.get起保日期())));
-            car.setBaoXian2(changeDate(Long.parseLong(vo.get终止日期())));
+            try {
+                car.setBaoXian(changeDate(Long.parseLong((int)(Float.parseFloat(vo.get起保日期())) + "")));
+            }catch (Exception e) {
+                car.setBaoXian("");
+            }
+            car.setBaoXian2("");
             car.setSellerName("虚拟店铺");
             car.setSellerId("1385394385809707009");
             car.setJia(vo.get车架号());
@@ -125,8 +133,12 @@ public class CarController {
             car.setType("电动三轮车");
             car.setRe1("浙江省宁波市宁海县");
             car.setRe2("浙江省宁波市宁海县");
+            car.setAddressHu(vo.get地址());
+            car.setAddressZhu(vo.get地址());
             car.setRemark("初始数据,批量导入");
+            car.setQrCode(vo.get二维码());
             car.setSh("1");
+            car.setGu("");
             iCarService.saveOrUpdate(car);
             System.out.println(index++);
         }
@@ -774,5 +786,18 @@ public class CarController {
         }
         iCarService.removeById(car.getId());
         return ResultUtil.success("OK");
+    }
+
+
+    @RequestMapping(value = "/getCarByQrCode", method = RequestMethod.GET)
+    public Result<Car> appUpdate(@RequestParam String code){
+        QueryWrapper<Car> qw = new QueryWrapper<>();
+        qw.eq("qr_code",code);
+        qw.orderByDesc("create_time");
+        List<Car> carList = iCarService.list(qw);
+        if(carList.size() > 0) {
+            return new ResultUtil<Car>().setData(carList.get(0));
+        }
+        return new ResultUtil<Car>().setErrorMsg("NULL");
     }
 }

@@ -109,4 +109,7 @@ public class Car extends XbootBaseEntity {
 
     @ApiModelProperty(value = "审核")
     private String sh;
+
+    @ApiModelProperty(value = "二维码")
+    private String qrCode;
 }

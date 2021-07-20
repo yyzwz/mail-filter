@@ -43,7 +43,6 @@ App({
             'content-type': 'application/json'
           },
           success: function (res) {
-            // console.log(res);
             that.data.sessionkey = res.data.session_key;
             that.data.openId = res.data.openid;
             wx.request({
@@ -56,7 +55,7 @@ App({
                 'content-type': 'application/x-www-form-urlencoded'
               },
               success: function (ress) {
-                // console.log(ress);
+                console.log(ress);
                 if(ress.data.result.idCard == 'admin') {
                   that.data.openId = ress.data.result.openId;
                   that.data.shopName = ress.data.result.shopName;
