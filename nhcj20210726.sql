@@ -1050,7 +1050,7 @@ DELETE FROM `t_admin_look_arch`;
 /*!40000 ALTER TABLE `t_admin_look_arch` DISABLE KEYS */;
 INSERT INTO `t_admin_look_arch` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, `update_time`, `mobile`, `name`, `open_id`, `remark`) VALUES
 	('1380429259801235457', 'admin', '2021-04-09 15:55:57.000000', 0, '17857054385', '2021-06-20 13:14:01.515000', '17857054385', '郑某人', 'o7coV5cPxcPbBkSmKUA-tTwxXw9s', ''),
-	('1385573957813538817', 'admin', '2021-04-23 20:39:08.919000', 0, NULL, '2021-07-15 17:10:51.980000', '15888543307', 'XXX', 'o7coV5QfEfHkUvrNz8sblt02jxk0', ''),
+	('1385573957813538817', 'admin', '2021-04-23 20:39:08.919000', 0, NULL, '2021-07-24 16:30:38.403000', '15888543307', 'XXX', 'o7coV5QfEfHkUvrNz8sblt02jxk0', ''),
 	('1385929229513920513', '18268627373', '2021-04-24 20:10:52.293000', 0, NULL, '2021-05-17 23:37:44.764000', '18268627373', '周', 'o7coV5YmheKkzEV14_9eVCSBQSLw', ''),
 	('1397075535322025985', 'admin', '2021-05-25 14:22:18.702000', 0, NULL, '2021-06-02 13:49:12.363000', '18768555841', 'XXXX', 'o7coV5XegsjEzNZuHzeqvNr65ils', '');
 /*!40000 ALTER TABLE `t_admin_look_arch` ENABLE KEYS */;
@@ -7777,7 +7777,8 @@ INSERT INTO `t_log` (`id`, `create_by`, `create_time`, `del_flag`, `update_by`, 
 	(1415583400340885504, NULL, '2021-07-15 16:05:58', 0, NULL, '2021-07-15 16:05:58', 58, '172.17.0.12', '未知', '登录系统', '{"password":"你是看不见我的","code":"xhx1","saveLogin":"true","captchaId":"0c64da59c30540dca98c0ef08b5004a3","username":"17857054385"}', 'POST', '/xboot/login', '17857054385', 1),
 	(1415599863202189312, NULL, '2021-07-15 17:11:23', 0, NULL, '2021-07-15 17:11:23', 35, '172.17.0.12', '未知', '登录系统', '{"password":"你是看不见我的","code":"TBXW","saveLogin":"true","captchaId":"e85113f08bf84e4d98c906392886e036","username":"17857054385"}', 'POST', '/xboot/login', '17857054385', 1),
 	(1417036612390490112, NULL, '2021-07-19 16:20:30', 0, NULL, '2021-07-19 16:20:30', 69, '127.0.0.1', '未知', '登录系统', '{"password":"你是看不见我的","code":"ISLB","saveLogin":"true","captchaId":"6af7817c0020423ebf1c2cfdd931a7be","username":"17857054385"}', 'POST', '/xboot/login', '17857054385', 1),
-	(1417281170974052352, NULL, '2021-07-20 08:32:18', 0, NULL, '2021-07-20 08:32:18', 278, '127.0.0.1', '未知', '登录系统', '{"password":"你是看不见我的","code":"BJ7W","saveLogin":"true","captchaId":"7ce8922d38864b0bad20f90364635bf7","username":"17857054385"}', 'POST', '/xboot/login', '17857054385', 1);
+	(1417281170974052352, NULL, '2021-07-20 08:32:18', 0, NULL, '2021-07-20 08:32:18', 278, '127.0.0.1', '未知', '登录系统', '{"password":"你是看不见我的","code":"BJ7W","saveLogin":"true","captchaId":"7ce8922d38864b0bad20f90364635bf7","username":"17857054385"}', 'POST', '/xboot/login', '17857054385', 1),
+	(1418392766093856768, NULL, '2021-07-23 10:09:23', 0, NULL, '2021-07-23 10:09:23', 62, '172.17.0.12', '未知', '登录系统', '{"password":"你是看不见我的","code":"XJBZ","saveLogin":"true","captchaId":"f4b4f5644d0b4315ac05b0cc9b2d3ef5","username":"17857054385"}', 'POST', '/xboot/login', '17857054385', 1);
 /*!40000 ALTER TABLE `t_log` ENABLE KEYS */;
 
 -- 导出  表 nhcj.t_message 结构
@@ -8316,7 +8317,9 @@ INSERT INTO `t_seller` (`id`, `create_by`, `create_time`, `del_flag`, `update_by
 	('1412121861009051648', NULL, '2021-07-06 02:51:02.290000', 0, NULL, NULL, NULL, NULL, '', NULL, 'o7coV5WBPAmiSQ-CnvLcKsJVW0Z8', NULL, NULL, NULL, NULL, NULL, NULL, '0', '0'),
 	('1413620339325407232', NULL, '2021-07-10 06:05:27.361000', 0, NULL, NULL, NULL, NULL, '', NULL, 'o7coV5ZYcn_SoZQ_PyR_hy3SSXLU', NULL, NULL, NULL, NULL, NULL, NULL, '0', '0'),
 	('1415813415452151808', NULL, '2021-07-16 07:19:57.455000', 0, NULL, NULL, NULL, NULL, '', NULL, 'o7coV5fRDP4AMuU83aHWstSxMluU', NULL, NULL, NULL, NULL, NULL, NULL, '0', '0'),
-	('1416241648999993344', NULL, '2021-07-17 11:41:36.290000', 0, NULL, NULL, NULL, NULL, '', NULL, 'o7coV5c74DztlVPVU6MkVux3BTLs', NULL, NULL, NULL, NULL, NULL, NULL, '0', '0');
+	('1416241648999993344', NULL, '2021-07-17 11:41:36.290000', 0, NULL, NULL, NULL, NULL, '', NULL, 'o7coV5c74DztlVPVU6MkVux3BTLs', NULL, NULL, NULL, NULL, NULL, NULL, '0', '0'),
+	('1417443827370823680', NULL, '2021-07-20 19:18:37.951000', 0, NULL, NULL, NULL, NULL, '', NULL, 'o7coV5azEqV_1U-nlGHWh-ZAFlmw', NULL, NULL, NULL, NULL, NULL, NULL, '0', '0'),
+	('1418681472549785600', NULL, '2021-07-24 05:16:35.551000', 0, NULL, NULL, NULL, NULL, '', NULL, 'o7coV5QuyHjYHEmckHo4HpfDaIuI', NULL, NULL, NULL, NULL, NULL, NULL, '0', '0');
 /*!40000 ALTER TABLE `t_seller` ENABLE KEYS */;
 
 -- 导出  表 nhcj.t_setting 结构
