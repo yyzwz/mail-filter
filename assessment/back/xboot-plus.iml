@@ -32,6 +32,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="zwdd-sdk-java-1.2.0" level="project" />
+    <orderEntry type="library" name="core-3.3.0" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.9" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.6.RELEASE" level="project" />
@@ -311,6 +312,5 @@
     <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svggen:1.7" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:2.2.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.2.6.RELEASE" level="project" />
-    <orderEntry type="library" name="core-3.3.0" level="project" />
   </component>
 </module>
