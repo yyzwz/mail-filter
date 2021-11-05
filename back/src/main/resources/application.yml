@@ -10,37 +10,17 @@ server:
 spring:
   # 数据源
   datasource:
-    url: ENC(rDG/3ggCZtBgyzOkgfR2ETz+wknG0gzH4lFW0lwFBkOGqrck5JFP3zRsSBSBjq5AW85chh+mRtlW77Ilv7KJnAomn6co4J6q3EwdaOoCcYDe4si4F92bFAaRlEos7m3NOjrIkU9XXcjm/H+PvWmvG2YPrFDFN+/rxZkxNqfygUT+13UIjgxENGnWQ1JyFWZB4X1YgkyXKiS+lt5GlFVKda1RxL05JOWDbJEfz7kKZu/Wpzg61QAum8ZXLwClx9Ix)
-    username: ENC(hpV8RC/3Ghau2sVfiJjqM8b2iVfgEOft9F0D3cxYKPiwRHgDHnKuRWSAnh1FLaDj)
-    password: ENC(OTWHfyegfe/EGhmc0NjHsy/XFFhXHqMl9NOjDMY295JMiImySuyT8txhggdzI+jc)
+    url: ENC(B5qocKpp6fLplXSHw5qXzJNTcPbfQAs74R+HWfQT7HOP09UtEkwFEHxWE+0S5C+3oJh4h0nzJ+2g6Xe/6k3De9rDoeQIh2CRpt0AAGhVcj2lD/9SrO1hMEXX+93h/+V1B0CM0VSvgdc88p0pJ+nGPAnShSRJWlZ7p+MM00iPbv28w4HG1egaNiWbWlWyTWGUpe05vG40a+VsPuNVeKsL4y8AEMcswBu21+38kyZqjGvkDrYcb/9Ly1895ItrHuKq)
+    username: ENC(h1i96/BjYS9MEVRw82YEZ36Om1oHc0iVNkbuHDbjK7Ip7QHj/HfCQvFS9DbDs5Nl)
+    password: ENC(EQ9pesnhIGP8/2cNoopXyrrs2F6QxpoVcHNxS48M1SO5GpNW7qCwXjty7PIhqAoJZLC1B2eZxp5aiRefVAoHKg==)
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
     # Druid StatViewServlet配置
     druid:
-      stat-view-servlet:
-        # 默认true 内置监控页面首页/druid/index.html
-        enabled: true
-        url-pattern: /druid/*
-        # 允许清空统计数据
-        reset-enable: true
-        login-username: ENC(tGlEitxzu6ipfM9OnaI6+bsBIY21RFCoHaYJNIupsdBQuatfVUCgIIMFJbmFAXyb)
-        login-password: ENC(VfWws9tGlQKlQyRwoVjWZypBmxcBcOKTdoHuCwMZ0exGZzDWPOyT2EtK4eUUShsS)
-        # IP白名单 多个逗号分隔
-        allow:
-        # IP黑名单
-        deny:
       filter:
-        stat:
-          # 开启监控sql
-          enabled: true
-          # 显示并标注慢sql 默认当超过3秒显示
-          log-slow-sql: true
-          slow-sql-millis: 3000
-          merge-sql: true
-        # 防SQL注入过滤
+        # 放SQL注入攻击
         wall:
           config:
-            # 允许多条sql同时执行
             multi-statement-allow: true
   jpa:
     # 显示sql
@@ -51,11 +31,10 @@ spring:
   # Redis
   redis:
     host: 127.0.0.1
-    # password: NHCJrmzf
+    password: NHCJrmzf
     # 数据库索引 默认0
     database: 0
-    port: 6379
-    # 39418
+    port: 39418
     # 超时时间 Duration类型 3秒
     timeout: 3S
   # Elasticsearch
@@ -98,12 +77,6 @@ spring:
     time-zone: GMT+8
     serialization:
       fail-on-empty-beans: false
-  boot:
-    admin:
-      # 修改上下文路径
-      context-path: ENC(GxcLKLLE3wh4FFsAYK+CmJxdH6bCw1gHMATsP1gBZpCu7mPzOxUj3YgQ4YXCHEZ5)
-      client:
-        url: ENC(dXyy3vvNxonCrLHmbOwZIXLuoDgaQw5w/7BBRUOD+a8JT1182pkovelxiEyWDjlRzTfh2Zetkmi8+FaS4/GnRgBdA+8JbeDX9StAmv3JSrE=)
 
 xboot:
   # 全局限流
