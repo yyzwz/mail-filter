@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="zwdd-sdk-java-1.2.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/main/lib/zwdd-sdk-java-1.2.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

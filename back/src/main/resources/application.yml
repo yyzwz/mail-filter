@@ -1,269 +1,87 @@
 server:
-  port: 8888
+  port: 8081
   servlet:
     context-path: /
   tomcat:
     uri-encoding: UTF-8
-    max-threads: 1000
-    min-spare-threads: 30
-
+    threads:
+      max: 1000
+      min-spare: 30
+    max-swallow-size: -1
+  shutdown: graceful
 spring:
-  # 数据源
   datasource:
-    url: ENC(B5qocKpp6fLplXSHw5qXzJNTcPbfQAs74R+HWfQT7HOP09UtEkwFEHxWE+0S5C+3oJh4h0nzJ+2g6Xe/6k3De9rDoeQIh2CRpt0AAGhVcj2lD/9SrO1hMEXX+93h/+V1B0CM0VSvgdc88p0pJ+nGPAnShSRJWlZ7p+MM00iPbv28w4HG1egaNiWbWlWyTWGUpe05vG40a+VsPuNVeKsL4y8AEMcswBu21+38kyZqjGvkDrYcb/9Ly1895ItrHuKq)
-    username: ENC(h1i96/BjYS9MEVRw82YEZ36Om1oHc0iVNkbuHDbjK7Ip7QHj/HfCQvFS9DbDs5Nl)
-    password: ENC(EQ9pesnhIGP8/2cNoopXyrrs2F6QxpoVcHNxS48M1SO5GpNW7qCwXjty7PIhqAoJZLC1B2eZxp5aiRefVAoHKg==)
+    url: jdbc:mysql://127.0.0.1:3306/mail?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&allowMultiQueries=true
+    username: root
+    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.jdbc.Driver
-    # Druid StatViewServlet配置
+    driverClassName: com.mysql.cj.jdbc.Driver
     druid:
       filter:
-        # 放SQL注入攻击
         wall:
           config:
             multi-statement-allow: true
+    hikari:
+      max-lifetime: 60000
+      maximum-pool-size: 1000
   jpa:
-    # 显示sql
     show-sql: true
-    # 自动生成表结构 关闭设为none
     hibernate:
       ddl-auto: update
-  # Redis
   redis:
     host: 127.0.0.1
-    password: NHCJrmzf
-    # 数据库索引 默认0
     database: 0
-    port: 39418
-    # 超时时间 Duration类型 3秒
+    port: 6379
     timeout: 3S
-  # Elasticsearch
-  data:
-    elasticsearch:
-      client:
-        reactive:
-          # 要连接的ES客户端 多个逗号分隔
-          endpoints: 127.0.0.1:9300
-      # 暂未使用ES 关闭其持久化存储
-      repositories:
-        enabled: false
-  # 定时任务
-  quartz:
-    # 任务信息存储至数据库
-    job-store-type: jdbc
-    properties:
-      org:
-        quartz:
-          jobStore:
-            misfireThreshold: 100
-  # 工作流
-  activiti:
-    check-process-definitions: false
-    db-identity-used: true
-    # 自动生成Activiti相关表 第一次生成后建议关闭提高运行速度
-    database-schema-update: true
-    history-level: full
-    # 扩展配置
-    xboot:
-      # 流程图字体 默认宋体
-      activityFontName: Microsoft YaHei
-      labelFontName: Microsoft YaHei
-  # 文件大小上传配置
   servlet:
     multipart:
-      max-file-size: 5MB
-      max-request-size: 5MB
+      max-file-size: 50MB
+      max-request-size: 50MB
   jackson:
     time-zone: GMT+8
     serialization:
       fail-on-empty-beans: false
-
-xboot:
-  # 全局限流
-  ratelimit:
-    enable: true
-    # 每1秒内
-    timeout: 1000
-    # 总限制200个请求
-    limit: 200
-  # IP限流
-  iplimit:
-    enable: true
-    # 每1秒内
-    timeout: 1000
-    # 每个ip限制30个请求
-    limit: 30
-  # 后台token交互方式
-  token:
-    # 默认为true，token将存入redis，并具有单点登录功能 设为false使用JWT交互
-    redis: true
-    # 是否开启单设备登陆 仅当token交互方式为redis时生效
-    sdl: true
-    # token中存储用户权限数据 开启后可避免每次请求再获取用户权限，但有可能导致编辑权限菜单后无法读取到最新权限数据（需用户重新登录）
-    storePerms: true
-    # token过期时间 redis模式有请求自动刷新（分钟）
-    tokenExpireTime: 60
-    # 用户选择 保存登录状态/记住我 对应token过期时间（天）
-    saveLoginTime: 7
-    # 限制用户登陆错误次数（次）
-    loginTimeLimit: 10
-    # 错误超过次数后多少分钟后才能继续登录（分钟）
-    loginAfterTime: 10
-  # app应用 token交互配置
-  appToken:
-    # 是否开启同一平台单设备登陆（如安卓设备只允许登录一个相同账号，IOS设备可允许一个设备同时登陆）
-    spl: true
-    # token过期时间 有请求自动刷新（天）
-    tokenExpireTime: 30
-  # 使用Spring @Cacheable注解失效时间
-  cache:
-    # 过期时间单位 支持day、hour、minute对应天、小时、分钟
-    unit: day
-    # 过期时间 永久不过期设为-1
-    time: 15
-  # 日志记录方式 true使用Elasticsearch记录 false记录至数据库中
-  logRecord:
-    es: false
-  # 腾讯位置服务key配置 腾讯位置服务官网注册添加key
-  qqlbs:
-    key: 你的腾讯位置服务key
-  # 第三方社交登录配置
-  social:
-    # 前端回调登录地址
-    callbackFeUrl: http://127.0.0.1:9999/login
-    # 前端绑定账号回调地址
-    callbackFeRelateUrl: http://127.0.0.1:9999/relate
-    # github
-    github:
-      clientId: 你的clientId
-      clientSecret: 你的clientSecret
-      callbackUrl: http://127.0.0.1:8888/xboot/social/github/callback
-    # qq
-    qq:
-      appId: 你的appId
-      appKey: 你的appKey
-      callbackUrl: http://127.0.0.1:8888/xboot/social/qq/callback
-    # weibo
-    weibo:
-      appKey: 你的appKey
-      appSecret: 你的appSecret
-      callbackUrl: http://127.0.0.1:8888/xboot/social/weibo/callback
-    # wechat
-    wechat:
-      appId: 你的appId
-      appSecret: 你的appSecret
-      callbackUrl: http://127.0.0.1:8888/xboot/social/wechat/callback
-
-
-# 需要验证码校验的接口路径 支持通配符 自动过滤拦截校验 无需开发人员再次校验
-captcha:
-  # 图片验证码验证
-  image:
-    - /xboot/login # 登录接口
-    - /xboot/oauth2/authorize # 认证接口
-  # 短信验证码验证
-  sms:
-    - /xboot/user/regist # 注册接口
-    - /xboot/user/smsLogin # 短信登录接口
-    - /xboot/user/resetByMobile # 手机重置密码
-    - /xboot/user/changeMobile # 更换绑定手机
-    - /xboot/app/v1/member/quickLogin # 会员快捷登录注册接口
-  # Vaptcha验证码验证
-  vaptcha:
-    - /xboot/common/captcha/sendRegistSms/** # 发送注册短信
-    - /xboot/common/captcha/sendResetSms/** # 发送重置密码短信
-    - /xboot/email/sendResetCode/** # 发送重置密码邮件
-    - /xboot/social/relate # 绑定第三方账号
-  # Email验证码验证
-  email:
-    - /xboot/email/resetByEmail # 邮件重置密码
-    - /xboot/email/editEmail # 修改绑定邮箱
-
-# 忽略url
-ignored:
-  # 无需登录认证的请求
-  urls:
-    - /xboot/**/**
-    - /xboot/**/**/**
-    - /xboot/app/v1/**
-    - /xboot/oauth2/**
-    - /xboot/actuator/**
-    - /xboot/admin/**
-    - /editor-app/**
-    - /xboot/act/**
-    - /xboot/dictData/getByType/**
-    - /xboot/email/sendResetCode/**
-    - /xboot/email/resetByEmail
-    - /xboot/file/view/**
-    - /xboot/social/**
-    - /xboot/ws/**
-    - /xboot/setting/notice
-    - /xboot/user/regist
-    - /xboot/user/smsLogin
-    - /xboot/user/resetByMobile
-    - /xboot/common/**
-    - /druid/**
-    - /swagger-ui.html
-    - /swagger-resources/**
-    - /swagger/**
-    - /**/v2/api-docs
+intercept:
+  verification:
+    - /zwz/login
+    - /zwz/user/regist
+  wechat:
+    - /zwz/user/smsLogin
+    - /zwz/user/resetByMobile
+    - /zwz/user/changeMobile
+release:
+  authentication:
+    - /zwz/actuator/**
+    - /zwz/dictData/getByType/**
+    - /zwz/file/view/**
+    - /zwz/ws/**
+    - /zwz/setting/notice
+    - /zwz/user/regist
+    - /zwz/common/**
     - /**/*.js
     - /**/*.css
     - /**/*.png
     - /**/*.ico
-    - /xboot/test/**
-  # 限流及黑名单不拦截的路径
-  limitUrls:
+    - /zwz/test/**
+  limiting:
     - /**/*.js
     - /**/*.css
     - /**/*.png
     - /**/*.ico
-
-# Actuator
-management:
-  health:
-    # 暂未用到ES 关闭其健康检查
-    elasticsearch:
-      enabled: false
-  endpoint:
-    health:
-      show-details: always
-      status:
-        http-mapping:
-          DOWN: 200
-          OUT_OF_SERVICE: 200
-          FATAL: 200
-          UNKNOWN: 200
-  endpoints:
-    web:
-      base-path: /xboot/actuator/
-      exposure:
-        include: '*'
-
-# Swagger界面内容配置
-swagger:
-  title: 长街三小车管理系统 API接口文档
-  description: nhcj Api Documentation
-  version: 1.0.0
-  termsOfServiceUrl: http://nhcj.gov.cn
-  contact:
-    name: 宁海县长街镇人民政府
-    url: http://nhcj.gov.cn
-    email: nhcj@163.com
-
-# Mybatis-plus
 mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
   mapper-locations: classpath*:mapper/*.xml
-
-# 日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 logging:
-  # 输出级别
   level:
     root: info
   file:
-    # 指定路径
-    path: car-logs
-    # 最大保存天数
-    max-history: 2000
-    # 每个文件最大大小
-    max-size: 5MB
+    path: logs
+  logback:
+    rollingpolicy:
+      max-history: 2000
+      max-file-size: 5MB
